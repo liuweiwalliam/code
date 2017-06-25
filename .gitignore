@@ -1,0 +1,46 @@
+# Dependency Ignore
+/front_end/
+/jb/
+/mui/
+/robot/
+/vue/
+/vue_devtools/
+/www/
+/yl/
+/Smarty/
+/CashierMachine/
+/templates_c/
+/adminRDS/
+/readRDS/
+/RdsManage/
+/db/
+/node_modules/
+
+# IDE
+.idea
+.buildpath
+.project
+.settings
+.DS_Store
+.nbproject
+*.iml
+.metadata
+
+# Vim swap
+*.swp
+.swp
+.swo
+*.swo
+.swn
+*.swn
+
+# Config
+
+# Tools
+*.log
+/.sass-cache/
+/templates_c/
+
+# Windows
+desktop.ini
+.sass-cache/
