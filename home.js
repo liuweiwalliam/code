@@ -7,7 +7,7 @@ var content = [
     ['local-YL-微商城', 'http://self.yilian.com//wechat/index.php'],
     ['test-YL-微商城', 'http://yilian.lefenmall.net/wechat/'],
     ['w-YL-微商城', 'http://w.lefenmall.com/wechat/'],
-    ['local微商城', 'self.lf.com/wechat/index.php'],
+    ['local微商城', 'http://self.lf.com/wechat/index.php'],
     ['test微商城', 'http://test.lefenmall.com/wechat/'],
     ['w微商城', 'http://w.lefenmall.com/wechat/'],
     ['worktile', 'https://worktile.com/dashboard'],
