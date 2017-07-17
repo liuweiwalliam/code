@@ -5,6 +5,7 @@
 /vue/
 /vue_devtools/
 /www/
+/lefen/
 /yl/
 /Smarty/
 /CashierMachine/
@@ -13,7 +14,8 @@
 /readRDS/
 /RdsManage/
 /db/
-/node_modules/
+/php/
+/*node_modules/
 
 # IDE
 .idea
