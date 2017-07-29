@@ -1,7 +1,10 @@
+<!--子组件-->
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button v-on:click="onClickMe">子组件Btn</button>
     <h2>Essential Links</h2>
+    <h2>{{msgToSon}}</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
       <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
@@ -10,7 +13,7 @@
       <br>
       <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
     </ul>
-    <h2>Ecosystem</h2>
+    <h2 @click="sayToFather">Ecosystem openMouse</h2>
     <ul>
       <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
       <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
@@ -21,33 +24,43 @@
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  export default {
+    name: 'hello',
+    data () {
+      return {
+        msg: 'wish from son',
+      }
+    },
+    props: ['msgToSon'],
+    methods: {
+      onClickMe: function () {
+        console.log(this.msgToSon);
+      },
+      sayToFather: function () {
+        let msg = 'say to father sth';
+        this.$emit
+      }
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
 
-a {
-  color: #42b983;
-}
+  a {
+    color: #42b983;
+  }
 </style>
