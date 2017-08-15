@@ -18,7 +18,7 @@ var content = [
     ['知乎', 'https://www.zhihu.com/'],
     ['知乎Live', 'https://www.zhihu.com/lives/users/003881100aa941f379502ed508aa2bff'],
     ['jsfiddle', 'https://jsfiddle.net/reactjs/69z2wepo/'],
-    ['git hub', 'https://github.com/'],
+    ['github', 'https://github.com/'],
     ['hao123', 'https://www.hao123.com'],
     ['简书', 'http://www.jianshu.com/p/43bf4f2e0d57'],
     ['IFE', 'http://ife.baidu.com/'],
