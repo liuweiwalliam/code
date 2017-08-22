@@ -22,7 +22,7 @@ var content = [
     ['hao123', 'https://www.hao123.com'],
     ['简书', 'http://www.jianshu.com/p/43bf4f2e0d57'],
     ['IFE', 'http://ife.baidu.com/'],
-    ['w3scholl sql', 'http://www.w3school.com.cn/sql/sql_like.asp'],
+    ['w3scholl sql', 'http://www.w3school.com.cn/sql'],
     ['developers-google', 'https://developers.google.cn/products/'],
     ['weui', 'https://github.com/logoove/weui'],
     ['jqweui', 'http://jqweui.com/download'],
@@ -102,11 +102,11 @@ var content = [
 // ['',''],
 // ['',''],
 // ['',''],
-// ['',''],
 ];
 var node = document.getElementsByTagName('a');
 // console.log(document.body.nodeType);
 // console.log(123);
+console.log();
 
 
 
