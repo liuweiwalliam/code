@@ -3,18 +3,11 @@
 /jb/
 /robot/
 /vue/
-/vue_devtools/
-/www/
-/lefen/
-/yl/
-/Smarty/
-/CashierMachine/
-/templates_c/
-/adminRDS/
-/readRDS/
-/RdsManage/
-/db/
+/mui/
 /php/
+/www/
+/yl/
+/vue_devtools/
 /*node_modules/
 
 # IDE
