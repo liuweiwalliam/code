@@ -8,7 +8,7 @@ var content = [
     ['local-YL-微商城ip', 'http://192.168.1.54/wechat/index.php'],
     ['test-YL-微商城', 'https://yilian.lefenmall.net/wechat/'],
     ['w-YL-微商城', 'https://app.i1170.com/wechat/'],
-    ['local微商城', 'self.lf.com/wechat/index.php'],
+    ['local微商城', 'http://self.lf.com/wechat/index.php'],
     ['test微商城', 'http://test.lefenmall.com/wechat/'],
     ['w微商城', 'http://w.lefenmall.com/wechat/'],
     ['worktile', 'https://worktile.com/dashboard'],
