@@ -5,7 +5,7 @@ var content = [
     ['原型目录', 'http://192.168.1.188:8080/yilianAPP'],
     ['react首页', 'https://facebook.github.io/react/'],
     ['local-YL-微商城url', 'http://self.yilian.com/wechat/index.php'],
-    ['local-YL-微商城ip', 'http://192.168.1.54/wechat/index.php'],
+    ['local-YL-微商城ip', 'http://192.168.1.61/wechat/index.php'],
     ['test-YL-微商城', 'https://yilian.lefenmall.net/wechat/'],
     ['w-YL-微商城', 'https://app.i1170.com/wechat/'],
     ['local微商城', 'http://self.lf.com/wechat/index.php'],
