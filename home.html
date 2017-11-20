@@ -101,42 +101,27 @@
     ><span id="search_btn" class="search_btn" onclick="search();">go</span>
 </div>
 <br/>
-<div style="width: 100%;height: auto;" id="container">
-
-</div>
-<!--<div class="block" onclick="clicka(this)">-->
-    <!--<a href="http://www.baidu.com" target="_blank">baidu</a>-->
-<!--</div>-->
+<div style="width: 100%;height: auto;" id="container"></div>
 <script src="home.js"></script>
 <script>
     function search() {
         var text = encodeURI(document.getElementById("search_input").value);
         window.open('https://www.baidu.com/s?wd=' + text + '&rsv_spt=1&rsv_iqid=0xfa13038b00007a23&issp=1&f=8&rsv_bp=0&' +
                 'rsv_idx=2&ie=utf-8&tn=96079920_hao_pg&rsv_enter=1&rsv_sug3=8&rsv_sug1=6&rsv_sug7=100&rsv_sug2=0&inputT=' +
-                '1491&rsv_sug4=2274')
-    }
-    ;
+                '1491&rsv_sug4=2274')};
     function clicka(_that) {
-////        console.log( _that.getElementsByTagName("a")[0].href);
-//     window.open(_that.getElementsByTagName("a")[0].href);
         _that.getElementsByTagName("a")[0].click();
-    }
-    ;
+    };
     var htmlstr = "";
     content.forEach (function (item) {
         htmlstr += '<div class="block" onclick="clicka(this)"><a href="'+item[1]+'" target="_blank">'+item[0]+'</a></div>';
-
     });
     document.getElementById("container").innerHTML = htmlstr;
-
     function up (_that,event) {
         if(event.keyCode == 13){
             search();
         };
     };
-
-
-
 </script>
 </body>
 </html>

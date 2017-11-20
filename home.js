@@ -4,11 +4,8 @@
 var content = [
     ['google','https://www.google.com'],
     ['react首页', 'https://facebook.github.io/react/'],
-    ['阮一峰','http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html'],
-    ['worktile', 'https://worktile.com/dashboard'],
-    ['kancloud', 'http://www.kancloud.cn/explore'],
-    ['git lab', 'http://git.lefenmall.com:8088/'],
-    ['git lab 益联', 'http://git.lefenmall.com:8088/yilian'],
+    ['阮一峰react系列' ,'http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html'],
+    ['我的小米','https://i.mi.com/#homenew'],
     ['知乎', 'https://www.zhihu.com/'],
     ['知乎Live', 'https://www.zhihu.com/lives/users/003881100aa941f379502ed508aa2bff'],
     ['jsfiddle', 'https://jsfiddle.net/reactjs/69z2wepo/'],
@@ -20,8 +17,6 @@ var content = [
     ['developers-google', 'https://developers.google.cn/products/'],
     ['weui', 'https://github.com/logoove/weui'],
     ['jqweui', 'http://jqweui.com/download'],
-    ['蓝湖', 'https://lanhuapp.com'],
-    ['标你妹', 'http://www.biaonimeia.com/project'],
     ['zepto', 'http://www.css88.com/doc/zeptojs_api/#show'],
     ['菜鸟', 'http://www.runoob.com/'],
     ['h-ui', 'http://www.h-ui.net/Hui-notes-htmlStructure.shtml'],
@@ -73,10 +68,5 @@ var content = [
 // ['',''],
 // ['',''],
 ];
-var node = document.getElementsByTagName('a');
-// console.log(document.body.nodeType);
-// console.log(123);
-console.log();
-
 
 
