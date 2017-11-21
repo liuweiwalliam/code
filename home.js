@@ -2,6 +2,7 @@
  * Created by walliam on 2017/2/7.
  */
 var content = [
+    ['gitlab','http://gitlab.mila66.com'],
     ['google','https://www.google.com'],
     ['react首页', 'https://facebook.github.io/react/'],
     ['阮一峰react系列' ,'http://www.ruanyifeng.com/blog/2016/09/react-technology-stack.html'],
@@ -64,7 +65,6 @@ var content = [
     ['vue-resouce', 'https://github.com/pagekit/vue-resource'],
     ['vue-router', 'https://router.vuejs.org/zh-cn/'],
     ['正则表达式','https://regexper.com/'],
-// ['',''],
 // ['',''],
 // ['',''],
 ];
