@@ -2,6 +2,9 @@
  * Created by walliam on 2017/2/7.
  */
 var content = [
+    ['dev1 env','http://hrmlocal.dev.mila66.com'],
+    ['dev2 env','http://hrmlocal.dev2.mila66.com'],
+    ['test env','http://hrmv3.x.mila66.com'],
     ['gitlab','http://gitlab.mila66.com'],
     ['google','https://www.google.com'],
     ['react首页', 'https://facebook.github.io/react/'],
