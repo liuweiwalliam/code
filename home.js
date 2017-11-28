@@ -71,6 +71,12 @@ var content = [
     ['vue-resouce', 'https://github.com/pagekit/vue-resource'],
     ['vue-router', 'https://router.vuejs.org/zh-cn/'],
     ['正则表达式','https://regexper.com/'],
+    ['网易编译原理','http://mooc.study.163.com/learn/1000002001?tid=1000003000#/learn/content'],
+    ['网易编译原理','http://mooc.study.163.com/learn/1000002001?tid=1000003000#/learn/content'],
+    ['网易数据结构','http://www.icourse163.org/learn/ZJU-93001?tid=1002261004#/learn/content'],
+    ['中国大学慕课','http://www.icourse163.org/home.htm?userId=1016593350#/home/course'],
+
+
 // ['',''],
 // ['',''],
 ];
