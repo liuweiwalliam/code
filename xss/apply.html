@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	function animal(name) {
+		this.mac = name;
+		this.whatsYour_MBP_Size = function () {
+			return this.mac;
+		}
+	}
+
+	let pig = new animal("13.3");
+	let dog = new animal("15");
+	console.warn(pig.whatsYour_MBP_Size());
+	console.warn(dog.whatsYour_MBP_Size());
+	console.warn(dog.whatsYour_MBP_Size.apply(pig));
+</script>
+</body>
+</html>
