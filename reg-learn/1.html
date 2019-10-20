@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <select name="" id="testSelect">
+        <option value="1">狗子</option>
+        <option value="2">老猪</option>
+    </select>
+<button id="send">发送</button>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+    let selectValue = "";
+    $("#testSelect").change(function(e){
+        selectValue = e.target.value;
+    })
+    $("#send").click(function(){
+        $.ajax({
+            url: "http://253452.com",
+            type: 'post',
+            dataType: 'json',
+            data: {
+                value:selectValue
+            },
+            success: function(){ //成功回调
+
+            },
+            error: function(){ //失败回调
+
+            }
+        })
+    })
+</script>
+<!--<script>-->
+
+    <!--let str = "he is a boy,but he is not only a boy ";-->
+    <!--let reg = /he/ig;-->
+    <!--console.log(str.replace(reg,"she"));-->
+<!--</script>-->
+</body>
+</html>

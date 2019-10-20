@@ -14,8 +14,9 @@
 /hrm/
 /hexo/
 /accurate-calculate/
-/*node_modules/
-/nodeBasic/
+node_modules/
+/**/node_modules/
+nodeBasic/
 /ts-react/
 /xss/
 
