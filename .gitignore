@@ -9,9 +9,6 @@
 /yl/
 /vue_devtools/
 /liuweiwalliam.github.io/
-/hq/
-/saas_admin/
-/hrm/
 /hexo/
 /accurate-calculate/
 node_modules/
@@ -19,6 +16,7 @@ node_modules/
 nodeBasic/
 /ts-react/
 /xss/
+/Calculus/
 
 # IDE
 .idea
