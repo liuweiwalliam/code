@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stack</title>
+</head>
+<body>
+<!--
+后进先出
+要求的方法
+ push(element(s))：添加一个（或几个）新元素到栈顶。
+ pop()：移除栈顶的元素，同时返回被移除的元素。
+ peek()：返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返
+回它）。
+ isEmpty()：如果栈里没有任何元素就返回true，否则返回false。
+ clear()：移除栈里的所有元素。
+ size()：返回栈里的元素个数。这个方法和数组的length属性很类似。
+-->
+<script>
+    class Stack {
+        constructor() {
+            this.data = [];
+        }
+
+        push(item) {
+            this.data.push(item)
+        };
+
+        pop() {
+            return this.data.pop()
+        };
+
+        peek() {
+            return this.data[this.size() - 1];
+        }
+
+        isEmpty() {
+            return this.data.length == 0 ? true : false;
+        }
+
+        clear() {
+            this.data = [];
+        }
+
+        size() {
+            return this.data.length;
+        }
+    }
+
+    //用栈做进制转换十进制转换成任意进制
+    function conver(num, desc = 2) {
+        let stack = new Stack();
+        function div(number) {
+            let remainder = number % desc;
+            stack.push(remainder);
+            if(Math.floor(number/desc) != 0){
+                div(Math.floor(number/desc))
+            }
+        }
+        div(num);
+        console.log(stack);
+        return stack.data.reverse().join("");
+    }
+    console.log(conver(38,3));
+    // conver(22)
+</script>
+
+</body>
+</html>

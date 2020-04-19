@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	//链表的实现
+	class linkList {
+		constructor(length,) {
+			this.length = 0;
+			this.data = [];
+		};
+
+		remove(position) {
+			if (position > -1 && position <= this.length) {
+
+			}
+		}
+
+		add(position, data) { //加在该元素的位置上，其后的元素后移,position最小为0
+			if (position > -1 && position <= this.length) {
+				if (this.data[position]) {
+					let node = new Node(data);
+					node.pre = position;
+					if (position == 0) {
+						node.pre = null;
+					}
+					node.next = position + 1;
+					this.data.forEach(function (item, index) {
+						if (item.next == position) {
+							item.next = this.length;//已经+1后的
+						}
+					})
+					this.data.push(node);
+					this.length++;
+
+				} else { //向末未添加
+					let node = new Node(data);
+					node.pre = this.length - 1;
+					node.position = this.length;
+					this.data.push(node);
+					this.length++;
+					this.data.forEach(function (item, index) {
+						if (item.next == null) {
+							item.next = this.length - 1;//已经+1后的
+						}
+					})
+				}
+
+			}
+		}
+	}
+
+	class Node {
+		constructor(data) {
+			this.data = data;
+			this.position = null; //从零开始
+			this.pre = null;//num 实际数组的地址
+			this.next = null;//num
+		}
+	}
+</script>
+</body>
+</html>

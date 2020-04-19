@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btnAjax">测试</button>
+<script>
+	// // 求斐波那契数列的前20个数字。已知斐波那契数列中第一个数字是1，第二个是2，从第三项开始，每一项都等于前两项之和
+	// function getArr(num1, num2, len) {
+	// 	let arr = [num1, num2];
+	// 	for (let i = 1; i <= len - 2; i++) {
+	// 		arr.push(arr[arr.length - 1] + arr[arr.length - 2])
+	// 	}
+	// 	return arr
+	// }
+    //
+	// let arr = getArr(1, 2, 5);
+	// console.warn(arr.shift(2));
+	// console.warn(arr);
+
+	document.querySelector("#btnAjax").onclick = function () {
+		var ajax = new XMLHttpRequest();
+        ajax.open('post','http://hrmapi.x2.mila66.com/Api/Oauth/checkAccessToken');
+		ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		ajax.send('access_token=TKmuoknKc4NGRgttG41sVoJfDsMdBJ5r4ParOs97');
+
+		// 注册事件
+		ajax.onreadystatechange = function () {
+			if (ajax.readyState==4&&ajax.status==200) {
+				console.log(ajax.responseText);
+			}
+		}
+	}
+</script>
+</body>
+</html>

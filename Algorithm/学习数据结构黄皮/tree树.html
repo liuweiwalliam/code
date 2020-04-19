@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	function BinarySearchTree() {
+		var Node = function (key) { //{1}
+			this.key = key;
+			this.left = null;
+			this.right = null;
+		};
+		var root = null; //{2}
+		this.insert = function (key) {
+			var newNode = new Node(key); //{1}
+			if (root === null) { //{2}
+				root = newNode;
+			} else {
+				insertNode(root, newNode); //{3}
+			}
+		};
+	}
+</script>
+</body>
+</html>

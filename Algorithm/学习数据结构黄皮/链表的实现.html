@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	//链表的实现
+	class linkList {
+		constructor(length,) {
+			this.length = length;
+			this.length = 0;
+			this.head = null;
+		};
+
+		insert(data, position) {
+			var node = new Node(data, this.size() + 1)
+
+		}
+
+		removeAt(position) {
+			if (position > -1 && position < length) {
+				var head = this.head; // {4}
+				var current = head, // {2}
+					previous, // {3}
+					index = 0;
+
+				//移除第一项
+				if (position === 0) { // {5}
+					head = current.next;
+				} else {
+					while (index++ < position) { // {6}
+						previous = current; // {7}
+						current = current.next; // {8}
+					}
+					//将previous与current的下一项链接起来：跳过current，从而移除它
+					previous.next = current.next; // {9}
+				}
+				length--; // {10}
+				return current.element;
+			} else {
+				return null; // {11}
+			}
+		}
+
+		remove(element) {
+
+		}
+
+		size() {
+			return this.length;
+		};
+
+		append(element) {
+			var node = new Node(element),
+				current;
+			if (this.head === null) {
+				this.head = node;
+			} else {
+				current = this.head;
+				while (current.next) {
+					current = current.next;
+				}
+				current.next = node;
+			}
+			length++; //更新列表的长度
+		}
+	}
+
+	class Node {
+		// constructor(data, next) {
+		// this.data = data;
+		// this.next = next
+		// }
+		constructor(element) {
+			this.element = element;
+			this.next = null;
+		}
+	}
+</script>
+</body>
+</html>
