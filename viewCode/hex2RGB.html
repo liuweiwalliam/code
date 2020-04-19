@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <style>
+    .test {
+      display: flex;
+      width: 1300px;
+      justify-content: space-between;
+    }
+
+    .test2 {
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    function hex2RGB(hex) {
+      let newHex = hex.substr(1, hex.length - 1);
+      let hexArr = [];
+      if (newHex.length == 3) {
+        hexArr = [newHex[0] + newHex[0], newHex[1] + newHex[1], newHex[2] + newHex[2]];
+      } else if (newHex.length == 6) {
+        hexArr = [newHex.substr(0, 2), newHex.substr(2, 2), newHex.substr(4, 2)]
+      } else {
+        return hex
+      }
+      let RGBArr = [parseInt(hexArr[0], 16), parseInt(hexArr[1], 16), parseInt(hexArr[2], 16)];
+      let res = `rgb(${RGBArr[0]},${RGBArr[1]},${RGBArr[2]})`
+      if (res.indexOf("NaN") > -1) {
+        return hex
+      }
+      return res
+    }
+    function rgb2Hex(rgbStr = "rgb(0,0,0)") {
+      let rgbNumStr = rgbStr.substr(4, rgbStr.length - 5);
+      rgbArr = rgbNumStr.split(",");
+      function dec2Hex(decStr) {
+        let res = Number(decStr).toString("16");
+        return res.length > 1 ? res : "0" + res;
+      }
+      let hexArr = rgbArr.map(function (item, index) {
+        return dec2Hex(item)
+      })
+      return `#${hexArr[0]}${hexArr[1]}${hexArr[2]}`
+
+    }
+    // console.log(hex2RGB("#abcfzz"))
+    console.log(rgb2Hex("rgb(1,255,2)"))
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>

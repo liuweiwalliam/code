@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <div style="width: 100px; height: 80px;">
+      <div style="background-color: #000; padding-top: 40%;">
+        <!-- 为啥padding是40px -->
+      </div>
+    </div>
+    <script>
+      /**
+       *
+             let p1 = new Promise(function (resolve) {
+        console.log("a");
+        resolve();
+      })
+        .then(function () {
+          console.log("b");
+        })
+        .then(function () {
+          console.log("c");
+        });
+      let p2 = new Promise(function (resolve) {
+        console.log("d");
+        resolve();
+      }).then(function () {
+        console.log("e");
+      });
+      p1.then(function () {
+        console.log("f");
+      });
+      //a d b e c f
+       **/
+
+      let x = 1;
+      let y = {},
+      function foo() {
+        let x = 2;
+        console.log(x);
+        setTimeout(() => {
+          console.log("inner settimeout x", x);
+        }, 1);
+      }
+      foo();
+    </script>
+  </body>
+</html>
+4564565

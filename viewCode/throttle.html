@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+      function throttle(func, delay) {
+        let timer = null;
+        function throttleInner() {
+          let context = this;
+          let args = arguments;
+          if (!timer) {
+            timer = setTimeout(function () {
+              func.apply(context, args);
+              clearTimeout(timer);
+              timer = null;
+            }, delay);
+          }
+        }
+        return throttleInner;
+      }
+
+      function debounce(func, delay) {
+        let timer = null;
+
+        function delayFunc(context, args) {
+          timer = setTimeout(function () {
+            func.apply(context, args);
+            clearTimeout(timer);
+            timer = null;
+          }, delay);
+        }
+        function innerDebounce() {
+          let args = arguments;
+          let context = this;
+          if (!timer) {
+            delayFunc(context, args);
+          }
+        }
+        return innerDebounce;
+      }
+    </script>
+  </body>
+</html>
+4564565

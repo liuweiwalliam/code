@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      function Promise(excutor) {
+        var self = this;
+        self.onResolvedCallback = [];
+        function resolve(value) {
+          setTimeout(() => {
+            self.data = value;
+            self.onResolvedCallback.forEach((callback) => callback(value));
+          });
+        }
+        excutor(resolve.bind(self));
+      }
+      Promise.prototype.then = function (onResolved) {
+        var self = this;
+        return new Promise((resolve) => {
+          self.onResolvedCallback.push(function () {
+            var result = onResolved(self.data);
+            if (result instanceof Promise) {
+              result.then(resolve);
+            } else {
+              resolve(result);
+            }
+          });
+        });
+      };
+    </script>
+  </body>
+
+  <script>
+    function promise(excutor) {
+      let _this = this;
+      _this.status = "pending";
+      _this.onResolvedArr = [];
+      function resolve(val) {
+        setTimeout(() => {
+          this.status = "revolved";
+          _this.data = value;
+          _this.onResolvedArr.forEach((callback) => callback(val));
+        }, 0);
+      }
+      excutor(resolve.bind(_this));
+    }
+    promise.prototype.then = function (onResolved) {
+      let _this = this;
+      return new promise(function (resolve) {
+        _this.onResolvedArr.push(function () {
+          let result = onResolved(this.data);
+          if (this.result instanceof promise) {
+            // resolve的权力被交给了user promise
+
+            result.then(resolve);
+          } else {
+            resolve(result);
+          }
+        });
+      });
+    };
+  </script>
+</html>
